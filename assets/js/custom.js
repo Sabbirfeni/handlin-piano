@@ -8,6 +8,7 @@ $(document).ready(function(){
 
 const activePage = window.location.href;
 const originPage = window.location.origin;
+
 const navLinks = document.querySelectorAll('.primary-nav ul li a');
 navLinks.forEach((link) => {
   if(link.href === activePage) {
