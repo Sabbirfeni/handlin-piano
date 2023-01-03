@@ -1797,7 +1797,6 @@ ul.footer_social_link li a:hover{
 .expand-btn {
     appearance: none;
     color: #ae895d;
-    border: 1px solid black;
     padding: 0.5em 0.5em 0.5em 0em;
     border-radius: 0.25em;
     cursor: pointer;
