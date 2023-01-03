@@ -1772,16 +1772,47 @@ ul.footer_social_link li a:hover{
 .instrument_care-text p {
     position: relative;
     margin: 25px 0 0 0;
-}
-.instrument_care-text p {
     color: #C2C2C2;
     font-size: 14px;
     font-weight: 300;
-    position: relative;
     padding-bottom: 25px;
+
+    --max-lines: 7;
+    --line-height: 1.4;
+
+    max-height: calc(var(--max-lines) * 1em * var(--line-height));
+    line-height: var(--line-height);
+    overflow: hidden;
+}
+.instrument_care-text p:has(+ .expand-btn:not(:checked)):before {
+    content: '';
+    position: absolute;
+    height: calc(1em * var(--line-height));
+    width: 100%;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, #1A1B1C);
 }
 
-.instrument_care-textp::before {
+.expand-btn {
+    appearance: none;
+    color: #ae895d;
+    border: 1px solid black;
+    padding: 0.5em 0.5em 0.5em 0em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.expand-btn::before {
+    content: 'More...';
+}
+.expand-btn:checked::before {
+    content: 'Collapse';
+}
+.instrument_care-text p:has(+ .expand-btn:checked) {
+    max-height: none;
+}
+/* .instrument_care-text p::before {
     content: '';
     position: absolute;
     width: 1px;
@@ -1791,14 +1822,14 @@ ul.footer_social_link li a:hover{
     background-color: #F1F1F1;
 }
 
-.instrument_care-textp::after {
+.instrument_care-text p::after {
     content: '\e901';
     font-family: "icomoon";
     position: absolute;
     bottom: -10px;
     left: 0;
     color: #F1F1F1;
-}
+} */
 
 @media (max-width: 600px) {
     .instrument_care-image img {
