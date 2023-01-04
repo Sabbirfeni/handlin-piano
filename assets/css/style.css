@@ -321,7 +321,7 @@ a:hover {
     }
 
     .banner-img img {
-        object-fit: cover;
+        object-fit: contain;
         height: 100%;
     }
 
@@ -333,7 +333,7 @@ a:hover {
     }
     .masthead h1 {
         font-size: 70px;
-        max-width: 400px;
+        max-width: 600px;
     }
 }
 
@@ -1168,6 +1168,18 @@ ul.footer_social_link li a:hover{
     margin-bottom: 30px;
 }
 .inner_about_content h2 span{
+    font-weight: 700;
+}
+.internal_page_title h2 {
+    width: 100%;
+    display: inline-block;
+    font-size: 34px;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #c2c2c2;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.internal_page_title h2 span{
     font-weight: 700;
 }
 .inner_about_content p {
